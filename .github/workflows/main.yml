@@ -1,6 +1,10 @@
 name: Build and Deploy
 
 on:
+  workflow_dispatch:
+    inputs:
+      parameter:
+        description: My Parameter
   push:
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
